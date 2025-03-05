@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Destinations</title>
+<link rel="stylesheet" href="amogus.css">
+</head>
+<body>
+    <h2>My Favorite Travel Destinations</h2>
+    <table>
+        <tr>
+            <th>Destination</th>
+            <th>Country</th>
+            <th>Fun Fact</th>
+            <th>Popular Attractions</th>
+        </tr>
+        <tr>
+            <td><a href="https://www.discoverlosangeles.com/">Los Angeles</a></td>
+            <td>U.S.A.</td>
+            <td>Home to Hollywood, the entertainment capital of the world.</td>
+            <td>
+                <ul>
+                    <li>Hollywood Walk of Fame</li>
+                    <li>Santa Monica Pier</li>
+                    <li>Universal Studios</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://www.visitlasvegas.com/">Las Vegas</a></td>
+            <td>U.S.A.</td>
+            <td>Known as "Sin City," famous for its vibrant nightlife and casinos.</td>
+            <td>
+                <ul>
+                    <li>The Strip</li>
+                    <li>Bellagio Fountains</li>
+                    <li>Fremont Street Experience</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://www.cq.gov.cn/">Chongqing</a></td>
+            <td>China</td>
+            <td>In Chongqing was built on the roofs of building.</td>
+            <td>
+                <ul>
+                    <li>Hongya Cave</li>
+                    <li>Ciqikou Ancient Town</li>
+                    <li>Three Gorges</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <div class="section" id="la" style="background-image: url('https://i.natgeofe.com/n/f7145fb3-d6ad-41bb-8065-1d7312e72bf4/hollywood-boulevard-los-angeles-california.jpg?w=2560&h=1708');">
+        <div class="heading">Los Angeles</div>
+    </div>
+    <div class="section" id="vegas" style="background-image: url('https://img.static-kl.com/images/media/4555AD79-58A9-4921-A1BECCD4ADF9EBAC');">
+        <div class="heading">Las Vegas</div>
+    </div>
+    <div class="section" id="chongqing" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/64/202308_Hongya_Cave_at_night_from_Qiansimen_Bridge.jpg');">
+        <div class="heading">重庆</div>
+    </div>
+    <script>
+        function handleScroll() {
+            document.querySelectorAll('.section').forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.75 && rect.bottom > 0) {
+                    section.classList.add('in-view');
+                } else {
+                    section.classList.remove('in-view');
+                }
+                const heading = section.querySelector('.heading');
+                let scaleFactor = Math.max(1, 2 - (rect.top / window.innerHeight));
+                let opacityFactor = Math.max(0.5, 1 - (rect.top / window.innerHeight));
+                heading.style.transform = `scale(${scaleFactor})`;
+                heading.style.opacity = opacityFactor;
+            });
+        }
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+    </script>
+</body>
+</html>
