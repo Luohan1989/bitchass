@@ -3,9 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>R FRANCISCO PORTFOLIO</title>
+    <style>
+        @font-face {
+            font-family: 'MatissePro';
+            src: url('FOT-MatissePro-EB.otf') format('opentype');
+        }
+        body {
+            background-color: #000000;
+            font-family: Helvetica, 'Courier New', Courier, monospace;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            margin-top: 100px;
+            color: #F66E25;
+            font-family: 'MatissePro';
+        }
+        .creator-page {
+            background-color: #290000;
+            padding: 20px;
+            margin-top: 50px;
+            border: 5px solid #F66E25;
+        }
+        .creator-page h2 {
+            color: #ddb500;
+        }
+        .creator-page table {
+            width: 50%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        .creator-page th, .creator-page td {
+            padding: 10px;
+            border: 1px solid #cccccc;
+        }
+        .creator-page th {
+            background-color: #F6E201;
+            color: #000000;
+        }
+        .creator-page td {
+            color: #cccccc;
+        }
+        a {
+            color: #F6E201;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ff0000;
+        }
+        .form-container {
+            background-color: #000000;
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 10px;
+            width: 50%;
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+        .form-container input[type="submit"] {
+            background-color: #F66E25;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #ff0000;
+        }
+    </style>
 </head>
 <body>
-    <iframe src="hey.html" frameborder="0"></iframe>
+    <h1>R FRANCISCO PORTFOLIO <br>WEB 產品群組</h1>
+
+    <h2>My Best <a href="hey.html">Output:</a></h2>
+    <img src="https://x0.at/uUgA.png" height="500px" width="1000px">
+    <div class="creator-page">
+        <h2>Creator Information</h2>
+        <table>
+            <tr>
+                <th>Attribute</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td><strong>Name:</strong></td>
+                <td>R. Francisco</td>
+            </tr>
+            <tr>
+                <td><strong>Origin:</strong></td>
+                <td>Manila</td>
+            </tr>
+            <tr>
+                <td><strong>Current Whereabouts:</strong></td>
+                <td>Bulacan</td>
+            </tr>
+            <tr>
+                <td><strong>Occupation:</strong></td>
+                <td>Student</td>
+            </tr>
+            <tr>
+                <td><strong>BloodType:</strong></td>
+                <td>AB-</td>
+            </tr>
+            <tr>
+                <td><strong>Contact:</strong></td>
+                <td>
+                    <a href="mailto:rd_francisco@smcm.edu.ph">rd_francisco@smcm.edu.ph</a><br>
+                    <a href="tel:09610617355">09610617355</a>
+                </td>
+            </tr>
+        </table>
+        <h2>Music</h2>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1ty0at2tUKqMGTyYbJ43eL?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2CGNAOSuO1MEFCbBRgUzjd?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0ua0Go4NN4Td7l0Zre6Ce3?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+    <div class="form-container">
+        <h2 style="font-family: 'MatissePro';color: #F66E25;">Contact Form</h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+            <label for="contacts">Contacts:</label>
+            <input type="text" id="contacts" name="contacts" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 </body>
 </html>
